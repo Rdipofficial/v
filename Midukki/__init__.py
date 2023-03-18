@@ -35,7 +35,7 @@ def who_is_creator(id1, id2):
 class Accounts(object):
     API_ID = int(environ.get("API_ID", "25748479"))
     API_HASH = environ.get("API_HASH", "a2605f5312dcc313c73eb484ec25e84a")
-    BOT_TOKEN = environ.get("BOT_TOKEN", "")
+    BOT_TOKEN = environ.get("BOT_TOKEN", "6222409201:AAGnwQZg1sMygVl7dJ9w_KbZn2eBazD8jRg")
     BOT_PLUGINS = environ.get("BOT_PLUGINS", "Midukki")
     BOT_SESSIONS = environ.get("BOT_SESSION", "Midukki-RoboT")
 
