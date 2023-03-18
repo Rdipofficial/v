@@ -33,9 +33,9 @@ def who_is_creator(id1, id2):
   return text
     
 class Accounts(object):
-    API_ID = int(environ.get("API_ID", 0))
-    API_HASH = environ.get("API_HASH")
-    BOT_TOKEN = environ.get("BOT_TOKEN")
+    API_ID = int(environ.get("API_ID", "25748479"))
+    API_HASH = environ.get("API_HASH", "a2605f5312dcc313c73eb484ec25e84a")
+    BOT_TOKEN = environ.get("BOT_TOKEN", "")
     BOT_PLUGINS = environ.get("BOT_PLUGINS", "Midukki")
     BOT_SESSIONS = environ.get("BOT_SESSION", "Midukki-RoboT")
 
@@ -66,13 +66,13 @@ class Configs(object):
 
     # MongoDB information
     DATABASE_NAME = environ.get("DATABASE_NAME", "Muhammed")
-    DATABASE_URL = environ.get("DATABASE_URL", None)
+    DATABASE_URL = environ.get("DATABASE_URL", "mongodb+srv://Lovely:LovelyMusic@lovely.zmqfspr.mongodb.net/?retryWrites=true&w=majority")
     COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
     # Groups & Channels
-    LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
+    LOG_CHANNEL = int(environ.get('LOG_CHANNEL', "-1001847722432"))
     SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/Mo_Tech_YT')
-    CHANNELS = [int(ch) if find.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
+    CHANNELS = [int(ch) if find.search(ch) else ch for ch in environ.get('CHANNELS', '-1001847722432').split()]
     FORCE_SUB = environ.get('FORCE_SUB')
     AUTH_CHANNEL = int(FORCE_SUB) if FORCE_SUB and find.search(FORCE_SUB) else None
     FORCES_SUB_LINK = environ.get('FORCE_SUB_LINK')
@@ -91,7 +91,7 @@ class Configs(object):
 
     # other
     DONATE_LINKS = environ.get("DONATION_LINK", "https://p.paytm.me/xCTH/7yzmtgie")
-    LOADING_SYMBOL = bool(environ.get("LOADING_MODE", True))
+    LOADING_SYMBOL = bool(environ.get("LOADING_MODE", False))
     LOADING_A = environ.get("LOADING_SYMBOL_A", "⚪️")
     LOADING_B = environ.get("LOADING_SYMBOL_B", "⚫️")
     STOP_BOT = bool(environ.get("DEFAULT", False))
